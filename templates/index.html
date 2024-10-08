@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Ajuste de Taylor</title>
+</head>
+<body>
+    <h1>Calculadora de Polinomios</h1>
+    <form method="POST">
+        <label for="func">Función:</label>
+        <input type="text" id="func" name="func" required>
+        <br>
+        <label for="degree">Grado del polinomio:</label>
+        <input type="number" id="degree" name="degree" required>
+        <br>
+        <label for="point">Punto de ajuste:</label>
+        <input type="number" id="point" name="point" step="0.1" required>
+        <br>
+        <button type="submit">Generar Gráfica</button>
+    </form>
+    <!-- Mostrar la gráfica si está disponible -->
+    {% if plot_url %}
+    <h2>Gráfica Generada:</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfica del Polinomio de Taylor">
+    {% endif %}
+</body>
+</html>
