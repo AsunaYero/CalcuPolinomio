@@ -1,149 +1,192 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="26.0.14">
-  <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
-    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-09-13T00:00:00.000Z" agent="5.0 (Windows)" etag="E1" version="20.8.12" type="device">
+  <diagram id="ENKA_diagram" name="Diagrama ENKA">
+    <mxGraphModel dx="1420" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="2" value="Thread 1" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="164.5" y="128" width="280" height="570" as="geometry" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Layer -->
+        <mxCell id="layer1" value="Layer 1" style="text;html=1;strokeColor=none;fillColor=none;" visible="1" parent="1"/>
+
+        <!-- Swimlane: Gobernanza de Datos (top) -->
+        <mxCell id="swim_gob" value="Área de Gobernanza de Datos" style="swimlane;html=1;rounded=0;strokeColor=#bdbdbd;fillColor=#e9e9e9;fontSize=14;align=center;verticalAlign=top;startSize=30;" vertex="1" parent="layer1">
+          <mxGeometry x="20" y="20" width="980" height="180" as="geometry"/>
         </mxCell>
-        <mxCell id="5" value="" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="2" vertex="1">
-          <mxGeometry x="100" y="40" width="30" height="30" as="geometry" />
+
+        <!-- Gobernanza: nodes -->
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="swim_gob">
+          <mxGeometry x="20" y="40" width="18" height="18" as="geometry"/>
         </mxCell>
-        <mxCell id="6" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#FF0000;endFill=1;rounded=0" parent="2" source="5" target="7" edge="1">
-          <mxGeometry x="100" y="40" as="geometry">
-            <mxPoint x="115" y="110" as="targetPoint" />
-          </mxGeometry>
+
+        <mxCell id="diagnostico" value="Diagnóstico de dispersión de datos globales" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_gob">
+          <mxGeometry x="60" y="40" width="300" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="7" value="idle" style="" parent="2" vertex="1">
-          <mxGeometry x="60" y="110" width="110" height="50" as="geometry" />
+
+        <mxCell id="politicas" value="Definir políticas de gobernanza coherentes" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_gob">
+          <mxGeometry x="380" y="40" width="300" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="8" value="user action" style="" parent="2" vertex="1">
-          <mxGeometry x="60" y="220" width="110" height="50" as="geometry" />
+
+        <mxCell id="jurisdicciones" value="Alinear políticas entre unidades y jurisdicciones" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_gob">
+          <mxGeometry x="700" y="40" width="250" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="2" source="7" target="8" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="monitoreo" value="Monitorear riesgos de cumplimiento normativo" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_gob">
+          <mxGeometry x="60" y="100" width="390" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="10" value="post command" style="" parent="2" vertex="1">
-          <mxGeometry x="60" y="325" width="110" height="50" as="geometry" />
+
+        <!-- Swimlane: Integración y Almacenamiento (middle) -->
+        <mxCell id="swim_int" value="Área de Integración y Almacenamiento" style="swimlane;html=1;rounded=0;strokeColor=#bdbdbd;fillColor=#fff9db;fontSize=14;align=center;verticalAlign=top;startSize=30;" vertex="1" parent="layer1">
+          <mxGeometry x="20" y="220" width="980" height="300" as="geometry"/>
         </mxCell>
-        <mxCell id="11" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="2" source="8" target="10" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <!-- Integración nodes -->
+        <mxCell id="inventario" value="Inventariar sistemas y plataformas de datos" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="40" y="260" width="300" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="12" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0" parent="2" source="10" target="7" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="160" y="290" as="sourcePoint" />
-            <mxPoint x="260" y="190" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="30" y="250" />
-            </Array>
-          </mxGeometry>
+
+        <mxCell id="unificar" value="Unificar fuentes en infraestructura centralizada (nube/híbrida)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="360" y="260" width="360" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="3" value="Thread 2" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="444.5" y="128" width="280" height="570" as="geometry" />
+
+        <mxCell id="transformacion" value="Estandarizar, transformar y limpiar datos (ETL/ELT)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="40" y="320" width="320" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="13" value="" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="3" vertex="1">
-          <mxGeometry x="60" y="40" width="30" height="30" as="geometry" />
+
+        <mxCell id="reportes" value="Facilitar análisis y generación de informes" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="380" y="320" width="300" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="14" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="13" target="15" edge="1">
-          <mxGeometry x="40" y="20" as="geometry">
-            <mxPoint x="55" y="90" as="targetPoint" />
-          </mxGeometry>
+
+        <mxCell id="optimizar" value="Optimizar recursos de almacenamiento y procesamiento" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="40" y="380" width="360" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="15" value="idle" style="" parent="3" vertex="1">
-          <mxGeometry x="20" y="110" width="110" height="50" as="geometry" />
+
+        <mxCell id="costos" value="Controlar visibilidad y reducir costos innecesarios" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_int">
+          <mxGeometry x="420" y="380" width="320" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="16" value="check for &#xa;new commands" style="" parent="3" vertex="1">
-          <mxGeometry x="20" y="220" width="110" height="50" as="geometry" />
+
+        <!-- Swimlane: Seguridad y Cumplimiento (right-upper) -->
+        <mxCell id="swim_seg" value="Área de Seguridad y Cumplimiento" style="swimlane;html=1;rounded=0;strokeColor=#bdbdbd;fillColor=#e8f6ff;fontSize=14;align=center;verticalAlign=top;startSize=30;" vertex="1" parent="layer1">
+          <mxGeometry x="20" y="540" width="980" height="160" as="geometry"/>
         </mxCell>
-        <mxCell id="17" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="15" target="16" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="controles" value="Aplicar controles de seguridad y acceso" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_seg">
+          <mxGeometry x="40" y="580" width="360" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="18" value="command queue" style="" parent="3" vertex="1">
-          <mxGeometry x="20" y="325" width="110" height="50" as="geometry" />
+
+        <mxCell id="auditoria" value="Ejecutar auditoría de seguridad y cumplimiento" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_seg">
+          <mxGeometry x="420" y="580" width="360" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="19" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="16" target="18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="decision_alert" value="¿Se detectan brechas/incumplimientos?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_seg">
+          <mxGeometry x="420" y="640" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="21" value="queue empty" style="rhombus;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3" vertex="1">
-          <mxGeometry x="150" y="225" width="80" height="40" as="geometry" />
+
+        <!-- Swimlane: Analítica Avanzada (bottom) -->
+        <mxCell id="swim_ana" value="Área de Analítica Avanzada" style="swimlane;html=1;rounded=0;strokeColor=#bdbdbd;fillColor=#e8fbe8;fontSize=14;align=center;verticalAlign=top;startSize=30;" vertex="1" parent="layer1">
+          <mxGeometry x="20" y="720" width="980" height="240" as="geometry"/>
         </mxCell>
-        <mxCell id="22" value="yes" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#FF0000;exitX=0.5;exitY=0;endFill=1;rounded=0;entryX=0.75;entryY=0.5;entryPerimeter=0" parent="3" source="21" target="25" edge="1">
-          <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="160" y="150" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="190" y="180" />
-            </Array>
-          </mxGeometry>
+
+        <mxCell id="calidad" value="Validar disponibilidad y calidad de datos" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_ana">
+          <mxGeometry x="40" y="760" width="400" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="23" value="no" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="21" target="30" edge="1">
-          <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="190" y="305" as="targetPoint" />
-          </mxGeometry>
+
+        <mxCell id="ia" value="Implementar modelos de IA y Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_ana">
+          <mxGeometry x="460" y="760" width="460" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="24" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="16" target="21" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="visualizacion" value="Visualizar datos en dashboards integrados" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_ana">
+          <mxGeometry x="40" y="820" width="420" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="25" value="" style="shape=line;strokeWidth=6;strokeColor=#ff0000;rotation=90" parent="3" vertex="1">
-          <mxGeometry x="130" y="127.5" width="50" height="15" as="geometry" />
+
+        <mxCell id="estrategia" value="Generar reportes estratégicos para innovación" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_ana">
+          <mxGeometry x="480" y="820" width="420" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="26" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#FF0000;endFill=1;rounded=0" parent="3" source="25" target="15" edge="1">
-          <mxGeometry x="130" y="90" as="geometry">
-            <mxPoint x="230" y="140" as="targetPoint" />
-          </mxGeometry>
+
+        <mxCell id="decision_final" value="Soportar toma de decisiones globales" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#ffffff;" vertex="1" parent="swim_ana">
+          <mxGeometry x="260" y="880" width="460" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="30" value="dispatch&#xa;command&#xa;worker thread" style="" parent="3" vertex="1">
-          <mxGeometry x="140" y="325" width="110" height="50" as="geometry" />
+
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="swim_ana">
+          <mxGeometry x="380" y="930" width="18" height="18" as="geometry"/>
         </mxCell>
-        <mxCell id="31" value="critical&#xa;section" style="shape=note;whiteSpace=wrap;size=17" parent="3" vertex="1">
-          <mxGeometry x="105" y="490" width="100" height="50" as="geometry" />
+
+        <!-- Edges: conexiones principales -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="start" target="diagnostico">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="32" value="" style="endArrow=none;strokeColor=#FF0000;endFill=0;rounded=0;dashed=1" parent="3" source="18" target="31" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="diagnostico" target="politicas">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="34" value="" style="whiteSpace=wrap;strokeColor=#FF0000;fillColor=#FF0000" parent="3" vertex="1">
-          <mxGeometry x="245" y="395" width="5" height="45" as="geometry" />
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="politicas" target="jurisdicciones">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="41" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;entryX=0;entryY=0.5;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0" parent="3" source="30" target="34" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="60" y="480" as="sourcePoint" />
-            <mxPoint x="160" y="380" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="195" y="400" />
-            </Array>
-          </mxGeometry>
+
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="jurisdicciones" target="monitoreo">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="4" value="Thread 3" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="724.5" y="128" width="280" height="570" as="geometry" />
+
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="monitoreo" target="inventario">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="33" value="process&#xa;command" style="" parent="4" vertex="1">
-          <mxGeometry x="90" y="405" width="110" height="50" as="geometry" />
+
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="inventario" target="unificar">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="35" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0;entryX=0.25;entryY=0.5;entryPerimeter=0" parent="4" target="25" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-30" y="410" as="sourcePoint" />
-            <mxPoint x="-120" y="120" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-10" y="135" />
-            </Array>
-          </mxGeometry>
+
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="unificar" target="transformacion">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="37" value="" style="edgeStyle=none;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0" parent="4" target="33" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-30" y="429.5" as="sourcePoint" />
-            <mxPoint x="90" y="429.5" as="targetPoint" />
-          </mxGeometry>
+
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="transformacion" target="reportes">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="38" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" parent="4" vertex="1">
-          <mxGeometry x="130" y="500" width="30" height="30" as="geometry" />
+
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="reportes" target="optimizar">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="39" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="4" source="33" target="38" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="optimizar" target="costos">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="20" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="1" source="10" target="18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="costos" target="controles">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="controles" target="auditoria">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="auditoria" target="decision_alert">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decisión: rutas Sí / No -->
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="decision_alert" target="controles">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label14" value="Sí" style="text;html=1;fontSize=11;" vertex="1" parent="layer1">
+          <mxGeometry x="610" y="700" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="decision_alert" target="calidad">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="label15" value="No" style="text;html=1;fontSize=11;" vertex="1" parent="layer1">
+          <mxGeometry x="490" y="700" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Continuación hacia analítica -->
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="calidad" target="ia">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="ia" target="visualizacion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1b1b1b;" edge="1" parent="layer1" source="visualizacion" target="estrategia">
+          <mxGeometr
